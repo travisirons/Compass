@@ -1,0 +1,415 @@
+﻿/*
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.7.0
+*/
+/**
+ * YUI Base
+ * @module base
+ * @namespace yui-
+ * @requires reset, fonts
+*/
+
+@import url(reset-fonts.css);
+
+body
+{
+    /* For breathing room between content and viewport. */
+    margin: 0px;
+}
+
+
+h1
+{
+    /* 18px via YUI Fonts CSS foundation. */
+    font-size: 138.5%;
+}
+
+h2
+{
+    /* 16px via YUI Fonts CSS foundation. */
+    font-size: 123.1%;
+}
+
+h3
+{
+    /* 14px via YUI Fonts CSS foundation. */
+    font-size: 108%;
+}
+
+h1, h2, h3
+{
+    /* Top & bottom margin based on font size. */
+    margin: 1em 0;
+}
+
+h1, h3, h4, h5, h6, strong, dt
+{
+    /* Bringing boldness back to headers and the strong element. */
+    font-weight: bold;
+}
+optgroup
+{
+    font-weight: normal;
+}
+
+abbr, acronym
+{
+    /* Indicating to users that more info is available. */
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+em
+{
+    /* Bringing italics back to the em element. */
+    font-style: italic;
+}
+
+del
+{
+    /* Striking deleted phrases. */
+    text-decoration: line-through;
+}
+
+blockquote, ul, ol, dl
+{
+    /* Giving blockquotes and lists room to breath. */
+    margin: 1em;
+}
+
+ol, ul, dl
+{
+    /* Bringing lists on to the page with breathing room. */
+    margin-left: 2em;
+}
+
+ol ol, ul ul { 
+margin-top: .3em;
+margin-bottom: .3em;
+}
+
+ol li
+{
+    /* Giving OL's LIs generated numbers. */
+    list-style: decimal outside;
+}
+
+ol ol li
+{
+    list-style: lower-alpha;
+    padding-top: 0em;
+}
+
+ul li
+{
+    /* Giving UL's LIs generated disc markers. */
+    list-style: disc outside;
+}
+
+dl dd
+{
+    /* Giving UL's LIs generated numbers. */
+    margin-left: 1em;
+}
+
+th
+{
+    /* Distinguishing table headers from data cells. */
+    font-weight: bold;
+    text-align: center;
+}
+
+
+caption
+{
+    /* Coordinated margin to match cell's padding. */
+    margin-bottom: .5em; /* Centered so it doesn't blend in to other content. */
+    text-align: center;
+}
+
+sup
+{
+    /* to preserve line-height and selector appearance */
+    vertical-align: super;
+}
+
+sub
+{
+    /* to preserve line-height and selector appearance */
+    vertical-align: sub;
+}
+
+p, fieldset, pre
+{
+    /* So things don't run into each other. */
+    margin-bottom: 1em;
+}
+/* Opera requires 1px of passing to render with contemporary native chrome */
+/* setting a consistent width, 160px; 
+   control of type=file still not possible */
+input[type=text], input[type=password], textarea
+{
+}
+
+
+
+/********** Site Specific *************/
+
+
+/* Color Scheme  
+     Light Grey afb4b4
+     Dark Gray	767a7a
+     White		ffffff
+     Green		4C5758
+     WHP Blue	13b5ea
+     Lite Text  DEE0E0
+*/
+
+/********** Page Layout ***************/
+
+html
+{
+    background: #808080 url(bodybg.jpg) repeat-x center top fixed;
+}
+
+body
+{
+    background: #808080 url(bodybg.jpg) repeat-x center top fixed;
+    margin: 0px;
+}
+
+#page
+{
+    width: 974px;
+    margin: 0px auto 0px auto;
+}
+
+/*** Header Styles ***/
+
+#header
+{
+    background-color: #860000;
+    background-image: url('headerbg.png');
+    background-repeat: repeat-x;
+    height: 60px;
+    width: 100%;
+}
+
+#title
+{
+    float: left;
+    width: 425px;
+}
+
+#omnisearch
+{
+    border: 1px solid #000080;
+    background-color: #ffffff;
+    float: left;
+    width: 415px;
+    margin: 15px 0px 15px 100px;
+    padding: 2px 0px 2px 10px;
+}
+
+.omnisearch-textbox
+{
+    font-size: 18px;
+    height: 24px;
+    border-style: none;
+    vertical-align: middle;
+	border-top-width: 0 px; 
+	border-right-width: 0 px; 
+	border-bottom-width: 0px; 
+	border-left-width: 0 px;
+}
+
+.omnisearch-imagebutton
+{
+    vertical-align: middle;
+}
+
+#welcomeheader
+{
+    background: #000000 url('welcomebg.png' ) repeat-x;
+    height: 20px;
+    vertical-align: middle;
+    color: #ffffff;
+    text-align: right;
+    padding-right: 7px;
+    font-size: 11px;
+}
+
+/*** Menu styles ***/
+#menu
+{
+    float: left;
+    width: 200px;
+    height: 228px;
+    background-color: black;
+    padding-top: 8px;
+    padding-bottom: 7px;
+}
+
+#menu .menuitem
+{
+    padding: 3px 15px 3px 15px;
+	  white-space: nowrap;
+  overflow: hidden;
+}
+#menu a
+{
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+#feature
+{
+    float: left;
+    width: 449px;
+}
+
+#tools
+{
+    float: right;
+    width: 325px;
+}
+
+#footer
+{
+    clear: both;
+    height: 10px;
+}
+/**** Column Layouts ****/
+
+.middle, .left, .right
+{
+}
+
+.space
+{
+    margin-top: 12px;    
+}
+
+.toppad
+{
+    padding-top: 12px;    
+}
+
+.bottompad
+{
+    padding-bottom: 22px;    
+}
+
+.col-one
+{
+    clear: both;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.col-one .middle
+{
+    width: 954px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.col-two
+{
+    clear: both;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.col-two .left
+{
+    float: left;
+    width: 629px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.col-two .left .splitleft
+{
+    float: left;
+    width: 309px;
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+.col-two .left .splitright
+{
+    float: right;
+    width: 309px;
+    margin-left: 5px;
+    margin-right: 0px;
+}
+
+.col-two .right
+{
+    float: left;
+    width: 315px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.col-three
+{
+    clear: both;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.col-three .left
+{
+    float: left;
+    width: 309px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.col-three .right
+{
+    float: right;
+    width: 310px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.col-three .middle
+{
+    float: left;
+    width: 315px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/*** End Column Layout ***/
+
+.container
+{
+    border: 1px solid #D5D5D5;
+    background-color: #FFFFFF;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-bottom: 10px;
+    Margin-bottom: 10px;
+}
+
+.container-blank
+{
+    border: none;
+    background-color: #D5D5D5;
+    padding: 0px;
+    Margin-bottom: 10px;
+}
+.adbox
+{
+    margin-bottom: 11px;
+    border: 1px solid #d2d2d2;
+    padding: 0px;
+}

@@ -1,0 +1,100 @@
+﻿<%@ Master Language="VB" CodeFile="normal.master.vb" Inherits="normal" %>
+<%@ Register src="/App_Library/Controls/TabStrip.ascx" tagname="TabStrip" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Compass</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" >
+	<meta name="msapplication-task" content="name=Directory; action-uri=/_Sections/Directory; icon-uri=/favicon.ico"/>
+	<meta name="msapplication-task" content="name=Forms; action-uri=/_Sections/Shared/Forms.aspx; icon-uri=/favicon.ico"/>
+	<meta name="msapplication-task" content="name=Training Center; action-uri=/_Sections/Training; icon-uri=/favicon.ico"/>
+	<meta name="msapplication-task" content="name=IT Support; action-uri=/_Sections/Support; icon-uri=/favicon.ico"/>
+	<meta name="msapplication-task" content="name=Design Resource; action-uri=/_Sections/Design; icon-uri=/favicon.ico"/>
+	<link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/App_Themes/normal_10/base.css" />
+    <link rel="stylesheet" type="text/css" href="/App_Themes/normal_10/page.css" />
+	<link rel="stylesheet" type="text/css" href="/App_Themes/normal_10/print.css" media="print" />
+    <style type="text/css">
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <div id="page">
+        <div id="header">
+            <div id="title">
+                <a href="http://www.whpacific.com"><img src="/App_Library/Images/spacer.gif" alt="WHPacific" height="60px" width="160px" border="0"/></a>
+                <a href="http://compass.whpacific.com"><img src="/App_Library/Images/spacer.gif" alt="Compass" height="60px" width="210px" border="0"/></a>
+            </div>
+            <div id="omnisearch">
+                <asp:Panel ID="pnlOmnisearch" runat="server" DefaultButton="btnNoButtonSearch">
+                    <asp:TextBox ID="txtSearchTerm" runat="server" CssClass="omnisearch-textbox" Width="335"></asp:TextBox>
+                    <asp:ImageButton ID="btnWebSearch" CssClass="omnisearch-imagebutton" runat="server" ImageUrl="/App_Library/Images/btnWebSearch.png" />
+                    <asp:ImageButton ID="btnPeopleSearch" CssClass="omnisearch-imagebutton" runat="server" ImageUrl="/App_Library/Images/btnPeopleSearch.png" />
+                    <asp:Button ID="btnNoButtonSearch" runat="server" Style="display: none" />
+                </asp:Panel>
+            </div>
+        </div>
+        <div id="welcomeheader">
+            <asp:Label ID="lblWelcomeMessage" runat="server" Text="Welcome Guest" Visible="false"></asp:Label>
+        </div>
+        <div id="subheader">
+            <div id="menu">
+                <div class="menuitem"><asp:HyperLink ID="HyperLink1" NavigateUrl="~/" runat="server">HOME</asp:HyperLink></div>
+                <div class="menuitem"><asp:HyperLink ID="HyperLink2" NavigateUrl="~/_Sections/Company" runat="server">OUR COMPANY</asp:HyperLink></div>
+                <div class="menuitem"><asp:HyperLink ID="HyperLink3" NavigateUrl="~/_Sections/Directory" runat="server">DIRECTORY</asp:HyperLink></div>
+                <div class="menuitem"><asp:HyperLink ID="HyperLink4" NavigateUrl="~/_Sections/Leadership" runat="server">LEADERSHIP DEVELOPMENT</asp:HyperLink></div>
+                <div class="menuitem"><asp:HyperLink ID="HyperLink5" NavigateUrl="~/_Sections/Safety" runat="server">SAFETY</asp:HyperLink></div>
+                <div class="menuitem"><asp:HyperLink ID="HyperLink6" NavigateUrl="~/_Sections/Project" runat="server">PROJECT MANAGEMENT</asp:HyperLink></div>
+                <div class="menuitem"><asp:HyperLink ID="HyperLink7" NavigateUrl="~/_Sections/Marketing" runat="server">SALES &amp; MARKETING TOOLS</asp:HyperLink></div>
+                <div class="menuitem"><asp:HyperLink ID="HyperLink8" NavigateUrl="~/_Sections/Employee" runat="server">EMPLOYEE TOOLS</asp:HyperLink></div>
+                <div class="menuitem"><asp:HyperLink ID="HyperLink9" NavigateUrl="~/_Sections/Design" runat="server">DESIGN RESOURCES</asp:HyperLink></div>
+                <div class="menuitem"><asp:HyperLink ID="HyperLink10" NavigateUrl="~/_Sections/Training" runat="server">TRAINING CENTER</asp:HyperLink></div>
+                <div class="menuitem"><asp:HyperLink ID="HyperLink11" NavigateUrl="~/_Sections/Support" runat="server">IT SUPPORT</asp:HyperLink></div>
+            </div>
+            <div id="feature">
+                <iframe src="/App_Library/Controls/Feature.aspx" scrolling="no" width="449" height="243"
+                    marginheight="0" marginwidth="0" frameborder="0"></iframe>
+            </div>
+            <div id="tools">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #000;">
+                    <tr>
+                        <td><asp:HyperLink ID="lnkA1" runat="server" ImageUrl="/App_Library/Images/ToolsA1.jpg" NavigateUrl="/_Sections/Shared/Forms.aspx" /></td>
+                        <td><asp:HyperLink ID="lnkB1" runat="server" ImageUrl="/App_Library/Images/ToolsB1.jpg" NavigateUrl="http://connections/" Target="_blank" /></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="lnkA2" runat="server" ImageUrl="/App_Library/Images/ToolsA2.jpg" NavigateUrl="http://cognos.nana.com/" Target="_blank" /></td>
+                        <td><asp:HyperLink ID="lnkB2" runat="server" ImageUrl="/App_Library/Images/ToolsB2.jpg" NavigateUrl="http://citrix.nana.com/" Target="_blank" /></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="lnkA3" runat="server" ImageUrl="/App_Library/Images/ToolsA3.jpg" NavigateUrl="/_Sections/Marketing/Good%20News" /></td>
+                        <td><asp:HyperLink ID="lnkB3" runat="server" ImageUrl="/App_Library/Images/ToolsB3.jpg" NavigateUrl="/_Sections/Support/Dynamics.aspx" /></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="lnkA4" runat="server" ImageUrl="/App_Library/Images/ToolsA4.jpg" NavigateUrl="/_Sections/Marketing/Company%20Store" /></td>
+                        <td><asp:HyperLink ID="lnkB4" runat="server" ImageUrl="/App_Library/Images/ToolsB4.jpg" NavigateUrl="/_Source/FileBucket/WHPacific%20Code%20of%20Conduct.pdf" Target="_blank" /></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="lnkA5" runat="server" ImageUrl="/App_Library/Images/ToolsA5.jpg" NavigateUrl="http://time.nana.com/" Target="_blank" /></td>
+                        <td><asp:HyperLink ID="lnkB5" runat="server" ImageUrl="/App_Library/Images/ToolsB5.jpg" NavigateUrl="https://webmail.nana.com/owa" Target="_blank" /></td>
+                    </tr>
+                    <tr>
+                        <td><asp:HyperLink ID="lnkA6" runat="server" ImageUrl="/App_Library/Images/ToolsA6.jpg" NavigateUrl="/_Sections/Shared/Comment.aspx" /></td>
+                        <td><asp:HyperLink ID="lnkB6" runat="server" ImageUrl="/App_Library/Images/ToolsB6.jpg" NavigateUrl="/_Sections/Employee/Report%20It" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="content">
+            <uc1:TabStrip ID="TabStrip1" runat="server" />
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="footer"></div>
+    </div>
+    </form>
+</body>
+</html>
